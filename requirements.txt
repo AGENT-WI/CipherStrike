@@ -1,0 +1,5 @@
+aiohttp==3.9.3
+playwright==1.41.2
+beautifulsoup4==4.12.3
+argparse
+asyncio
