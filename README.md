@@ -4,14 +4,14 @@ Educational payload generation framework for XSS, SQLi, and command injection
 # Encoding Module:
 ## Encoding Module (Educational Use Only)
 
-1=> Objectives
+### 1=> Objectives
 
 - Demonstrate encoding techniques used in web security research
 - Show how payload transformation affects detection systems
 - Provide CLI-based payload encoding
 - Export results for documentation and lab analysis
 
-2=> Features
+### 2=> Features
 
 | Feature | Description |
 |----------|------------|
@@ -23,7 +23,7 @@ Educational payload generation framework for XSS, SQLi, and command injection
 | CLI Interface | Clean command-line usage |
 | Logging | Informative error & success messages |
 
-3=> Demo Examples (Terminal)
+### 3=> Demo Examples (Terminal)
 
 ## 1️⃣ URL Encoding Example
 
@@ -69,10 +69,10 @@ Generated file:
     "encoded_output": "%3Cscript%3E"
 }
 ```
-4=> CLI Help Menu
+###  4=> CLI Help Menu
 
 python encoder.py --help
-## Educational Notes
+###  5=> Educational Notes
 
 Encoding techniques are commonly used in:
 
