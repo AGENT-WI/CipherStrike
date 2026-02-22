@@ -1048,35 +1048,3 @@ def get_module(
         min_confidence=min_confidence,
         waf_target=waf_target,
     )
-
-
-# ══════════════════════════════════════════════════════════════
-#  STANDALONE DEMO
-# ══════════════════════════════════════════════════════════════
-
-if __name__ == "__main__":
-
-    ci = get_module(target_os="all")
-
-    # Summary
-    ci.print_summary()
-
-    # Top 5 by confidence
-    print("Top 5 payloads by confidence:")
-    for p in ci.get_payloads()[:5]:
-        print(f"  [{p['confidence']}%] [{p['severity']:<8}] {p['payload'][:60]}")
-        print(f"         WAF: {', '.join(p['waf_bypasses']) or 'None'} | "
-              f"CVE: {', '.join(p['cve_refs']) or 'N/A'}")
-        print(f"         Hint: {p['detection_hint']}\n")
-
-    # Attack chain demo
-    ci.print_chain("unix_basic")
-    ci.print_chain("shellshock")
-
-    # WAF filter demo
-    print("Cloudflare bypass payloads:")
-    for p in ci.filter_by_waf("Cloudflare"):
-        print(f"  [{p['confidence']}%] {p['payload'][:60]}")
-
-    # Self-test
-    ci.run_self_test()
