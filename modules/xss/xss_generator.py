@@ -207,20 +207,4 @@ async def run_scan(url, concurrency, output, verbose):
 
     print(f"\n✅ Scan finished | Findings: {len(findings)}")
 
-# =========================
-# ENTRY
-# =========================
-def main():
-    parser = argparse.ArgumentParser(description="Elite XSS Scanner (Fixed)")
 
-    parser.add_argument("-u", "--url", required=True)
-    parser.add_argument("-c", "--concurrency", type=int, default=10)
-    parser.add_argument("-o", "--output")
-    parser.add_argument("-v", "--verbose", action="store_true")
-
-    args = parser.parse_args()
-
-    asyncio.run(run_scan(args.url, args.concurrency, args.output, args.verbose))
-
-if __name__ == "__main__":
-    main()
